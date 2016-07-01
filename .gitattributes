@@ -1,0 +1,2 @@
+data/journal/WiredTigerLog.* filter=lfs diff=lfs merge=lfs -text
+data/journal/WiredTigerPreplog.* filter=lfs diff=lfs merge=lfs -text
