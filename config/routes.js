@@ -32,9 +32,17 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: '../assets/index.html'
+  // '/': {
+  //   view: '/assets/index'
+  // }
+  '/': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/index.html');
+  },
+
+  '/signup': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/signup.html');
   }
+
 
   /***************************************************************************
   *                                                                          *
