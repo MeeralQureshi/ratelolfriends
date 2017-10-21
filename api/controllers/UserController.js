@@ -6,21 +6,40 @@
  */
 
 module.exports = {
+	// addUser: function(request, response){
+	// 	console.log("Reached Add User function");
+	// 	console.log(request.allParams());
 
-	getRandomHomepageSplash: function(request, response) {
-		console.log("Reached Homepage Splash")
-		// Generate random number between 1 and 131
-		var RandomChampNumber = Math.floor((Math.random() * 131) + 1);
-		// Request list of Champions
-		var ChampionListUrl = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=a2287b3f-deb3-4338-9e33-24e6596db9e9";
-		$.ajax(ChampionListUrl).done(function(Data){
-			var RandomChampKey = Object.keys(Data)[RandomChampNumber];
-			console.log(RandomChampKey);
-			var RandomSplashUrl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
-			RandomSplashUrl = RandomSplashUrl + RandomChampKey + "_0.jpg";
-			console.log(RandomSplashUrl);
-			response.send(RandomSplashUrl);
-		});
-	}
+	// 	// Find matching user names
+	// 	User.find({username: request.param("username")}).exec(function (err, usersCheck){
+	// 		console.log(usersCheck);
+
+	// 		if (err){
+	// 			return response.negotiate(err);
+	// 		}
+	// 		console.log("There are %d users with the same username: ", usersCheck.length, usersCheck);
+			
+	// 		if(usersCheck.length == 0){
+	// 			console.log("This username doesn't exist: Adding");
+
+	// 			// Need to encrypt password
+	// 			User.create({username: request.param("username"), password: request.param("password"), 
+	// 				summoner: request.param("summoner"), email: request.param("email")}).exec(function (error, newUser){
+	// 					if(error){
+	// 						console.log("NOT Succcessful");
+	// 						return response.badRequest(error);
+	// 					}
+	// 					console.log("Successfull");
+	// 				});
+	// 			response.sendfile(sails.config.appPath + '/assets/index.html');
+	// 			// return response.ok();
+	// 		}
+	// 		else{
+	// 			console.log("This username exists: Don't add");
+	// 			response.sendfile(sails.config.appPath + '/assets/userExists.html');
+	// 			// return response.ok();
+	// 		}
+	// 	});
+	// }
 };
 

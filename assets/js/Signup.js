@@ -3,15 +3,9 @@ $(document).ready(function(){
 
     console.log("Getting Signup Page");
 
-<<<<<<< HEAD
     var ChampionList = "/info/champList.js";
     var RandomChampNumber = Math.floor((Math.random() * 133) + 1);
     $.getJSON(ChampionList, function(Data){
-=======
-    var RandomChampNumber = Math.floor((Math.random() * 131) + 1);
-    var ChampionListUrl = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=<hidden>";
-    $.get(ChampionListUrl, function(Data){
->>>>>>> 96a4b13523e99912d7d9876b39131c191cea9e59
         console.log("Received champion list");
         console.log(Data);
 		var RandomChampKey = Object.keys(Data.data)[RandomChampNumber];
