@@ -3,15 +3,15 @@ $(document).ready(function(){
 
     console.log("Getting Signup Page");
 
-    var RandomChampNumber = Math.floor((Math.random() * 131) + 1);
-    var ChampionListUrl = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=a2287b3f-deb3-4338-9e33-24e6596db9e9";
-    $.get(ChampionListUrl, function(Data){
+    var ChampionList = "/info/champList.js";
+    var RandomChampNumber = Math.floor((Math.random() * 133) + 1);
+    $.getJSON(ChampionList, function(Data){
         console.log("Received champion list");
         console.log(Data);
 		var RandomChampKey = Object.keys(Data.data)[RandomChampNumber];
 		console.log(RandomChampKey);
-		var RandomSplashUrl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
-		RandomSplashUrl = RandomSplashUrl + RandomChampKey + "_0.jpg";
+		var RandomSplashUrl = "/images/ChampionSplashes/";
+		RandomSplashUrl = RandomSplashUrl + RandomChampKey + "_Splash_0.jpg";
 		console.log(RandomSplashUrl);
 		$(".site-wrapper-inner").css('background-image', 'url('+ RandomSplashUrl +')');
 		$(".site-wrapper-inner").css('background-repeat', 'no-repeat');

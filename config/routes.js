@@ -41,6 +41,10 @@ module.exports.routes = {
 
   '/signup': function(req, res, next) {
     res.sendfile(sails.config.appPath + '/assets/signup.html');
+  },
+
+  '/info/champList.js': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/info/champList.json');
   }
 
 
