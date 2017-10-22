@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 	function checkPasswordsMatch(){
 		console.log("Checking Passwords");
-		var Password1 = $("#inputPassword").val();
+		var Password1 = $("#password").val();
 		var Password2 = $("#verifyPassword").val();
 		if(Password1 != Password2){
 			$("#passwordCheck").html("<p style=\"color: red\"> Passwords do not match! <i class=\"fa fa-exclamation\" aria-hidden=\"true\" style=\"color: red\"></i></p>");

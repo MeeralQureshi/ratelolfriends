@@ -45,7 +45,16 @@ module.exports.routes = {
 
   '/info/champList.js': function(req, res, next) {
     res.sendfile(sails.config.appPath + '/assets/info/champList.json');
-  }
+  },
+
+ '/userAddSuccess': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/userAddSuccess.html');
+  },
+
+   '/userAddFail': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/userAddFail.html');
+  },
+
 
 
   /***************************************************************************
