@@ -189,6 +189,7 @@ body {
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
+  font-size: 10px;
 }
 
 
@@ -217,6 +218,11 @@ body {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
+
+#logo {
+  height: 50px;
+}
+
 
 @media (min-width: 992px) {
   .masthead,

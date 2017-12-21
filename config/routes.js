@@ -35,6 +35,8 @@ module.exports.routes = {
   // '/': {
   //   view: '/assets/index'
   // }
+
+  // Pages
   '/': function(req, res, next) {
     res.sendfile(sails.config.appPath + '/assets/index.html');
   },
@@ -43,17 +45,25 @@ module.exports.routes = {
     res.sendfile(sails.config.appPath + '/assets/signup.html');
   },
 
-  '/info/champList.js': function(req, res, next) {
-    res.sendfile(sails.config.appPath + '/assets/info/champList.json');
+    '/about': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/about.html');
   },
 
- '/userAddSuccess': function(req, res, next) {
+   '/userAddSuccess': function(req, res, next) {
     res.sendfile(sails.config.appPath + '/assets/userAddSuccess.html');
   },
 
    '/userAddFail': function(req, res, next) {
     res.sendfile(sails.config.appPath + '/assets/userAddFail.html');
   },
+
+  // Resources
+
+  '/info/champList.js': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/info/champList.json');
+  },
+
+
 
 
 
